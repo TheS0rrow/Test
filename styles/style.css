@@ -32,8 +32,19 @@ body {
 }
 
 header {
+	height: 600px;
 	padding-left: 8.33vw;
 	padding-right: 8.33vw;
+	padding-top: 25px;
+	padding-bottom: 10px;
+	background: url("../images/Header.jpg") no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+	background-origin: content-box;
+	
+}
+
+.header-text {
 	padding-top: 25px;
 }
 
@@ -118,6 +129,11 @@ input[type="search"] {
 	-webkit-appearance: none;
 }
 
+.phone {
+	text-align: right;
+	font-size: 20px;
+}
+
 .hat {
 	display: flex;
 	flex-flow: row;
@@ -138,6 +154,8 @@ input[type="search"] {
 
 /*Header для больших экранов*/
 .container_menu {
+	padding-bottom: 25px;
+	border-bottom: solid #efefef;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
