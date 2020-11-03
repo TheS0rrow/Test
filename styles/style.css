@@ -90,18 +90,13 @@ header {
 	height: 100%;
 	cursor: pointer;
 	background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
-
-	/* добавляем прозрачность кнопке отправки */
 	opacity: 0.5;
 }
 
-/* при наведении курсора меняем прозрачность кнопки отправки */
 .search .submit:hover {
 	opacity: 0.8;
 }
 
-/* данное свойство необходимо для того, чтобы в браузерах
-** Chrome и Safari можно было стилизовать инпуты */
 input[type="search"] {
 	-webkit-appearance: none;
 }
@@ -150,10 +145,77 @@ input[type="search"] {
 	border-bottom: solid #efefef;
 }
 
+.body_menu {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 8.33vw;
+	padding-right: 8.33vw;
+	max-width: 800px;
+}
+
+.body_menu div{
+	margin: 50px;
+}
+
+.green {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px green;
+	background-image: url("../images/cleaning.png");
+	background-size: contain;
+}
+
+.blue {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px steelblue;
+	background-image: url("../images/conformal.png");
+}
+
+.yellow {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px gold;
+	background-image: url("../images/resins.png");
+}
+
+.orange {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px tomato;
+	background-image: url("../images/thermal.png");
+}
+
+.red {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px red;
+	background-image: url("../images/lubricant.png");
+}
+
+.purple {
+	height: 187px;
+	width: 140px;
+	border-bottom: solid 4px mediumorchid;
+	background-image: url("../images/maintenance.png");
+}
+
+.body_menu a {
+	color: #565252;
+	text-decoration: none;
+}
+
 
 /*Header для средних экранов*/
 
 @media all and (max-width: 1200px) {
+
+	header {
+		background-image: url("../images/Header_smaller.jpg")
+	}
+
 	.container_menu {
 		display: flex;
 		flex-flow: row wrap;
@@ -198,4 +260,7 @@ input[type="search"] {
 		color: #565252;
 		text-decoration: none;
 	}
+	
+
+	
 }
