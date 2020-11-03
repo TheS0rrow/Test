@@ -8,7 +8,7 @@ body {
 	color: #565252;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 18px;
 	text-rendering: optimizeLegibility;
 }
 
@@ -32,28 +32,17 @@ body {
 }
 
 header {
-	height: 640px;
+	height: 500px;
 	padding-left: 8.33vw;
 	padding-right: 8.33vw;
 	padding-top: 25px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 	background: url("../images/Header.jpg") no-repeat;
 	background-position: bottom right;
 	background-size: contain;
 	background-origin: content-box;
 }
-
-.header-text {
-	padding-top: 25px;
-	padding-bottom: 15px;
-	border-bottom: solid #efefef;
-}
-
-.header-text p {
-	padding-top: 15px;
-	text-shadow: 1px 1px #fff;
-}
-
+ /*ПОИСК*/
 .search {
 	width: 200px;
 	position: relative;
@@ -106,6 +95,7 @@ input[type="search"] {
 	font-size: 20px;
 }
 
+/*ШАПКА*/
 .hat {
 	display: flex;
 	flex-flow: row;
@@ -123,8 +113,23 @@ input[type="search"] {
 	border-bottom: solid #888;
 }
 
+/*ТЕКСТ И ФОН*/
 
-/*Header для больших экранов*/
+.header_text {
+	text-shadow: #FFF 2px 2px 1px;
+	min-height: 280px;
+	max-height: 280px;
+	display: column flex;
+	height: auto;
+	justify-content: cover;
+}
+
+.main_text {
+	text-align: justify;
+	margin-top: 65px;
+}
+
+/*для больших экранов*/
 .container_menu {
 	padding-bottom: 25px;
 	border-bottom: solid #efefef;
@@ -138,75 +143,12 @@ input[type="search"] {
 .nav_link {
 	margin: 13px;
 	min-height: 50px;
-	min-width: 140px;
+	min-width: 120px;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 50px;
 	border-bottom: solid #efefef;
 }
-
-.body_menu {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-items: center;
-	padding-left: 8.33vw;
-	padding-right: 8.33vw;
-	max-width: 800px;
-}
-
-.body_menu div{
-	margin: 50px;
-}
-
-.green {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px green;
-	background-image: url("../images/cleaning.png");
-	background-size: contain;
-}
-
-.blue {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px steelblue;
-	background-image: url("../images/conformal.png");
-}
-
-.yellow {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px gold;
-	background-image: url("../images/resins.png");
-}
-
-.orange {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px tomato;
-	background-image: url("../images/thermal.png");
-}
-
-.red {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px red;
-	background-image: url("../images/lubricant.png");
-}
-
-.purple {
-	height: 187px;
-	width: 140px;
-	border-bottom: solid 4px mediumorchid;
-	background-image: url("../images/maintenance.png");
-}
-
-.body_menu a {
-	color: #565252;
-	text-decoration: none;
-}
-
 
 /*Header для средних экранов*/
 
@@ -216,7 +158,12 @@ input[type="search"] {
 		background-image: url("../images/Header_smaller.jpg")
 	}
 
+	.main_text {
+		display: none;
+	}
+
 	.container_menu {
+		border-bottom: none;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
@@ -233,17 +180,51 @@ input[type="search"] {
 		text-align: center;
 		border-bottom: solid #efefef;
 	}
+
+	.body_menu {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0px auto;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 8.33vw;
+	padding-right: 8.33vw;
+	position: center;
+	width: 580px;
+	}
+
+	.body_menu div {
+		margin: 10px;
+	}
+
+
 }
 
 /*Header для маленьких экранов*/
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 830px) {
+
+	header {
+	height: auto;
+	}
+
+	.hat {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	}
+
+	.main_text {
+		display: none;
+	}
+
 	.container_menu {
+		border-bottom: none;
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		margin: 0px auto;
-		max-width: 400px;
+		max-width: 640px;
 		padding-top: 25px;
 		align-items: center;
 	}
@@ -256,11 +237,124 @@ input[type="search"] {
 		border-bottom: solid #efefef;
 	}
 
+	#main_nav {
+		position: center;
+	}
+
 	#main_nav a{
 		color: #565252;
 		text-decoration: none;
+		text-align: center;
 	}
-	
 
+	.body_menu {
+	display: flex;
+	flex-flow: row wrap;
+	margin: 0px auto;
+	justify-content: center;
+	align-items: center;
+	padding: 0px;
+	position: center;
+	width: auto;
+	}
+
+	.body_menu div {
+		margin: 10px;
+	}
+}	
+
+/*Менюшка тела*/
+
+.body_menu {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: space-between;
+	padding-left: 8.33vw;
+	padding-right: 8.33vw;
+}
+
+
+.green {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px green;
+	background-image: url("../images/cleaning.png");
+	background-size: contain;
+}
+
+.green:hover,
+.green.active {
+	background-image: url("../images/cleaning_hover.png");
+}
+
+.blue {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px steelblue;
+	background-image: url("../images/conformal.png");
+	background-size: contain;
+}
+
+.blue:hover,
+.blue.active {
+	background-image: url("../images/conformal_hover.png");
+}
+
+.yellow {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px gold;
+	background-image: url("../images/resins.png");
+	background-size: contain;
+}
+
+.yellow:hover,
+.yellow.active {
+	background-image: url("../images/resins_hover.png");
+}
+
+.orange {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px tomato;
+	background-image: url("../images/thermal.png");
+	background-size: contain;
+}
+
+.orange:hover,
+.orange.active {
+	background-image: url("../images/thermal_hover.png");
+}
+
+.red {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px red;
+	background-image: url("../images/lubricant.png");
+	background-size: contain;
+}
+
+.red:hover,
+.red.active {
+	background-image: url("../images/lubricant_hover.png");
+}
+
+.purple {
+	height: 187px;
+	width: 140px;
+	border-top: solid 4px mediumorchid;
+	background-image: url("../images/maintenance.png");
+	background-size: contain;
+}
+
+.purple:hover,
+.purple.active {
+	background-image: url("../images/maintenance_hover.png");
+}
+
+.body_menu a {
+	color: #565252;
+	text-decoration: none;
 	
 }
